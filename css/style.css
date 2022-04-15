@@ -590,7 +590,57 @@ footer {
 }
 
 /* PAGES: CLASES ---------------------------------- */
+.profWrapper {
+    display: grid;
+    grid-template-areas:
+    'hipnotizador hipnotizador'
+    'guardian guardian'
+    'nigromante nigromante'
+    'guardabosques guardabosques'
+    'elementalista elementalista'
+    'guerrero guerrero'
+    'ladron ladron'
+    'ingeniero ingeniero'
+    'retornado retornado';
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+}
 
+.profHipnotizador {
+    grid-area: hipnotizador;
+}
+
+.profGuardian {
+    grid-area: guardian;
+}
+
+.profNigromante {
+    grid-area: nigromante;
+}
+
+.profGuardabosques {
+    grid-area: guardabosques;
+}
+
+.profElementalista {
+    grid-area: elementalista;
+}
+
+.profGuerrero {
+    grid-area: guerrero;
+}
+
+.profLadron {
+    grid-area: ladron;
+}
+
+.profIngeniero {
+    grid-area: ingeniero;
+}
+
+.profRetornado {
+    grid-area: retornado;
+}
 .prof {
     padding: 5vh 0;
     border-bottom: 1px dotted #f7a0f0;
@@ -684,38 +734,18 @@ footer {
     }
 
     /* CLASES ----------------------- */
-
-
-    .prof {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-    }
-
-    .prof .col_2 {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: flex-start;
-        text-align: left;
+    .profWrapper {
+        grid-template-areas:
+        'hipnotizador guardian'
+        'nigromante guardabosques'
+        'elementalista guerrero'
+        'ladron ingeniero'
+        'retornado';
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .profWrapper {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .prof {
-        width: 45%;
-    }
 
-    .prof .col_1 {
-        display: flex;
-        justify-content: end;
-        padding-right: 2vw;
-    }
 }

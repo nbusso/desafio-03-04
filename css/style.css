@@ -76,12 +76,10 @@ header {
 
 .wrapperReviews {
     grid-area: reviews;
-    border: 1px solid black;
 }
 
 footer {
     grid-area: footer;
-    border: 1px solid black;
 }
 
 /* HEADER ----------------------------------- */
@@ -108,10 +106,14 @@ header nav ul li {
     justify-content: center;
     align-items: center;
 
-    height: 8vh;
     width: 20%;
+    height: 8vh;
     font-size: 0.75rem;
     border-right: 1px solid lightgrey;
+}
+
+header nav ul li a {
+    color: #450079;
 }
 
     /* LANDING BANNER -----------------------*/
@@ -232,7 +234,7 @@ header nav ul li {
 
 /* || col 2 --------------------------------- */
 
-.col_2 {
+.wrapperExplora .col_2 {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -452,7 +454,7 @@ footer {
 }
 
 .footerWrapper {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px 0;
     display: flex;
@@ -483,7 +485,7 @@ footer {
 .footerNav ul li {
     font-size: 1.3rem;
     list-style-type: none;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .footerNav ul li:hover {
@@ -531,4 +533,189 @@ footer {
 
 .footerAnetLogoWrap {
     width: min-content;
+}
+
+/* PAGES ----------------------------------- */
+
+.mainPages {
+    padding: 0 3vw;
+    margin-top: 8vh;
+}
+
+.mainPages h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.mainPages h3 {
+    text-align: center;
+    color: #616161;
+    padding-bottom: 2vh;
+    border-bottom: 3px solid #450079;
+}
+
+/* PAGES: RAZAS ----------------------------------- */
+
+.razas {
+    padding: 3vh 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border-bottom: 1px dotted #f7a0f0;
+}
+
+.razas .col_2 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    
+    padding-bottom: 3vh;
+}
+
+.razas h4 {
+    font-size: 3rem;
+    color: #450079;
+}
+
+.razas h5 {
+    font-size: 1.5rem;
+    color: #505050;
+    padding-bottom: 1.5vh;
+}
+
+.mainRazas .razas .col_1 img {
+    width: 100%;
+    max-width: 350px;
+}
+
+/* PAGES: CLASES ---------------------------------- */
+
+.prof {
+    padding: 5vh 0;
+    border-bottom: 1px dotted #f7a0f0;
+}
+
+.prof h4 {
+    color:#450079;
+}
+
+/* PAGES: LINKS ---------------------------------- */
+.mainLinks {
+    padding: 2vh 2vw;
+}
+
+.wrapperCardLinks {
+    margin-top: 4vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cardLinks {
+    border: 1px solid #c3c3c3;
+    padding: 2vh 2vw;
+    width: 100%;
+    max-width: 320px;
+}
+
+.cardLinks h4 {
+    color: #450079;
+}
+
+.cardLinks ul {
+    padding-left: 6vw;
+}
+
+.cardLinks ul li {
+    line-height: 150%;
+}
+
+.cardLinks ul li a {
+    color:#4d0042;
+}
+
+@media screen and (min-width: 560px) {
+    .landingBanner {
+        background-image: url(../img/Concept07.jpg);
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .showroom .imgContainer {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 655px) {
+    .footerWrapper {
+        flex-flow: row nowrap;
+    }
+
+    .footerNav {
+        visibility: visible;
+        position: static;
+    }
+
+    .footerSocials {
+        border-bottom: none;
+    }
+
+    .footerAnetLogoWrap {
+        width: 100px;
+    }
+
+    .footerAnetLogoWrap img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* RAZAS ---------------------- */
+    .mainRazas .razas {
+        flex-flow: row nowrap;
+    }
+
+    .mainRazas .razas .col_2 {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    /* CLASES ----------------------- */
+
+
+    .prof {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+
+    .prof .col_2 {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .profWrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .prof {
+        width: 45%;
+    }
+
+    .prof .col_1 {
+        display: flex;
+        justify-content: end;
+        padding-right: 2vw;
+    }
 }
